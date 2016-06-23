@@ -1,0 +1,7 @@
+python audit-runner.py --start 20151113-00.00.00 --stop 20151113-23.59.59 --venue CME --account H456A --captures /Desktop/notes --output /CME_H456A.csv
+
+./audit-runner.py --start 20141113-00:00:00 --stop 20141113-23:59:59 --venue CME --account H456A --captures /tank/captures/continuous-captures/ix0/20141113-* --output CME_H456A.csv
+#this is the main comand
+
+python audit-runner.py --venue CME --acc UDH --captures "/home/sgiri/data/raw/ix0/tcp-only/2016/04/20160407-*" --output /home/sgiri/audit-runner/test_cme_output.csv
+

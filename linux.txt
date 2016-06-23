@@ -1,0 +1,25 @@
+veliosystem: alias: v
+then: ssh rob-server2.aur1
+
+#new branch
+git branch <branch_name>
+# swith to branch
+git chekout <branch_name>
+#delete branch with no warning(a little risk)
+git branch -D <branch_name>
+#delete with info if brnaches are not merger give message
+git branch -d <branch_name>
+
+-----
+
+SCREEN:
+
+	screen
+	ctrl+A, d    ==> detach
+        screen -ls   ==> list active screen sessions
+	screen -r    ==> attach to screen if only one exists
+		screen -r <number> if more than one
+		
+\n python notebook --profile=compliance_web_report --ip='*' 
+
+ python notebook --profile=compliance_web_report --ip='*'

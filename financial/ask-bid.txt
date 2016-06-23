@@ -1,0 +1,16 @@
+What is Bid(from buyer):
+	The bid price represents the maximum price that a buyer or buyers are willing to pay for a security(An apple).
+
+What is ask(taker willing to receive):
+	The ask price represents the minimum price that a seller or sellers are willing to receive for the security(An apple).
+
+When trade or transaction occur?:
+	A trade or transaction occurs when the buyer and seller agree on a price for the security(An apple).
+
+
+The average investor has to contend with the bid and asked spread as an implied cost of trading. For example, if the current price quotation for security A is $10.50 / $10.55, investor X who is looking to buy A at the current market price would pay $10.55, while investor Y who wishes to sell A at the current market price would receive $10.50.
+
+The bid-ask spread works to the advantage of the market maker. Continuing with the above example, a market maker who is quoting a price of $10.50 / $10.55 for security A is indicating a willingness to buy A at $10.50 (the bid price) and sell it at $10.55 (the asked price). The spread represents the market maker's profit.
+
+References:
+http://www.investopedia.com/terms/b/bid-askspread.asp?layout=infini&v=5D&adtest=5D
