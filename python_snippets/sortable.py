@@ -1,5 +1,8 @@
+
 class Config(object):
     _instance = None
+    def __init__(self):
+	self.fields = None
     
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
@@ -8,6 +11,13 @@ class Config(object):
 
     def set_fields(self, fields):
         self.fields = fields
+	#print self.fields
+    
+    def get_fields(self):
+	if self.fields is None:
+	    raise Exception("Sorting Fields not provided\n eg: sort(iterable, fields=['name' ,'dob'])")
+        return self.fields
+ 
 cfg = Config()
 
 class Sortable(object):
@@ -19,11 +29,16 @@ class Sortable(object):
         self.eq = None
 
     def __hash__(self, *args):
-        return hash(hash(self.name)+hash(self.date))
+	#print args
+	argsum = ""
+	for arg in args:
+	    argsum += hash(arg)
+	return hash(argsum)
+        #return hash(hash(self.name)+hash(self.date))
 
     def equal(self, other):
         self.eq = 0
-        for i, field in enumerate(cfg.fields):
+        for i, field in enumerate(cfg.get_fields()):
             if (getattr(self, field) == getattr(other, field)) and self.eq == i:
                 self.eq = i+1
             else:
@@ -52,7 +67,9 @@ class Sortable(object):
 
 def sort(lst, reverse=False, fields=[]):
     cfg = Config()
-    cfg.fields = fields
+
+    cfg.set_fields(fields)
+
     if isinstance(fields, list):
         return sorted(lst, reverse=reverse)
     else:
