@@ -16,7 +16,8 @@ def compute():
     return ast
 
 st = compute()
-users = sort(st, fields=['uid', 'name'], reverse=True)
+#users = sort(st, fields=['uid', 'name'], reverse=True)
+users = sort(st, fields=['uid', 'name']) # default reverse=False
 named = [[u.uid,u.name] for u in users ]
 dekha(named)
 
