@@ -22,7 +22,7 @@ cfg = Config()
 
 class Sortable(object):
     """
-	Inherit Sortable from the child class, example given below
+	Sortable extension for any domain object class based on their attirbutes so called fields here	
 
     """
     def __init__(self):
