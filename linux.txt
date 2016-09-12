@@ -23,3 +23,10 @@ SCREEN:
 \n python notebook --profile=compliance_web_report --ip='*' 
 
  python notebook --profile=compliance_web_report --ip='*'
+
+#tcpdump pcap files
+tcpdump -r /data/raw/ix0/tcp-only/2016/07/20160725-210523_25546 -s0 -A | grep 35=D
+
+#mergecap 
+mergecap -a <> -w output.file
+
