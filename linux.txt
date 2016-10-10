@@ -19,6 +19,9 @@ SCREEN:
         screen -ls   ==> list active screen sessions
 	screen -r    ==> attach to screen if only one exists
 		screen -r <number> if more than one
+	
+	RENAME:
+	ctrl+a, :sessionname mySessionName
 		
 \n python notebook --profile=compliance_web_report --ip='*' 
 
